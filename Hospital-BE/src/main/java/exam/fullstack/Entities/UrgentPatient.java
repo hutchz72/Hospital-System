@@ -29,6 +29,9 @@ public class UrgentPatient {
     @Column(name = "updatedAt")
     private LocalDateTime updatedAt;
 
+    @Column(name = "status")
+    private boolean status;
+
     @PrePersist
     protected void onCreate() {
         this.createdAt = LocalDateTime.now();
